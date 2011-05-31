@@ -6,9 +6,12 @@
       console.log(a, b, c);
   }
   </script>
+  <script src="/foo.js"></script>
+  <script src="/bar.js"></script>
 </head>
 
 <body>
+
 <div id="foo_links" class="foo_links">Stuff</div>
 
 <a class="foo_description" href="#" data-qux-id="9477" data-id="36981" data-magic="WN2-1D">
@@ -17,19 +20,7 @@
 
 <script>
 document.observe("dom:loaded", function() {
-  $$(".foo_description").each(function(link) {
-    var id = link.readAttribute('data-id');
-    var url = '/qux/' + link.readAttribute('data-qux-id') + '/foo_links/' + id + '?kind=Baz';
-
-    link.observe("click", function() {
-      new Ajax.Updater('foo_links', url, {
-        method: 'get',
-        evalScripts: true
-      });
-      set_current_bar('Baz', id, link.readAttribute('data-magic'));
-      return false;
-    });
-  });
+  new Foo(".foo_description");
 });
 </script>
 
