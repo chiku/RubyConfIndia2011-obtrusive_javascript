@@ -1,0 +1,6 @@
+This code was presented in RubyConf India 2011 by Habibullah Pagarkar and Chirantan Mitra
+
+This is a small sinatra application to illustrate moving away from obtrusive javascript.
+Run
+ruby server.rb
+Visit http://localhost:4567/index.html and click on the link
