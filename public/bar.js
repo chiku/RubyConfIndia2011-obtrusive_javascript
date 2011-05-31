@@ -29,6 +29,6 @@ Qux.prototype = {
   },
 
   url: function() {
-    return ('/qux/' + this.target.readAttribute('data-qux-id') + '/foo_links/' + this.id() + '?kind=Baz');
+    return this.target.readAttribute('rel');
   }
 }
