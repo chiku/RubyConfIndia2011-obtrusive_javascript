@@ -11,15 +11,14 @@
 <body>
 <div id="foo_links" class="foo_links">Stuff</div>
 
-<a class="foo_description" 
-  href="#" 
+<a class="foo_description"
+  href="#"
   onclick="new Ajax.Updater('foo_links', '/qux/9477/foo_links/36981?kind=Baz', {
     method: 'get',
-    asynchronous:true, 
     evalScripts:true
-  }); 
-  set_current_bar('Baz', 36981, 'WN2-1D'); 
-  return false; "
+  });
+  set_current_bar('Baz', 36981, 'WN2-1D');
+  return false;"
 >
 WN2-1D - 296024
 </a>
